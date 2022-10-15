@@ -1,0 +1,24 @@
+﻿@page "/Pages/Products/Lists"
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Bar Code</th>
+            <th>Name</th>
+            <th>Purchase Rate</th>
+            <th>MRP</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in PRODUCTS)
+        {
+            <tr>
+                <td>@item.BAR_CODE</td>
+                <td>@item.PRODUCT_NAME</td>
+                <td>@item.LAST_PRATE</td>
+                <td>@item.MRP_RATE</td>
+            </tr>
+        }
+    </tbody>
+</table>

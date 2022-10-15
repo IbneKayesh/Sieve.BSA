@@ -1,0 +1,51 @@
+﻿@page "/Pages/Products/Add"
+
+<EditForm Model="@products" OnValidSubmit="SaveUser">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label for="BAR_CODE" class="form-label">Name</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="products.BAR_CODE" />
+        </div>
+        <ValidationMessage For="@(() => products.BAR_CODE)" />
+    </div>
+    <div class="mb-3">
+        <label for="PRODUCT_NAME" class="form-label">Name</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="products.PRODUCT_NAME" />
+        </div>
+        <ValidationMessage For="@(() => products.PRODUCT_NAME)" />
+    </div>
+    <div class="mb-3">
+        <label for="LAST_PRATE" class="form-label">Last Purchase</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="products.LAST_PRATE" />
+        </div>
+        <ValidationMessage For="@(() => products.LAST_PRATE)" />
+    </div>
+    <div class="mb-3">
+        <label for="AVG_RATE" class="form-label">AVG</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="products.AVG_RATE" />
+        </div>
+        <ValidationMessage For="@(() => products.AVG_RATE)" />
+    </div>
+    <div class="mb-3">
+        <label for="MRP_RATE" class="form-label">MRP</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="products.MRP_RATE" />
+        </div>
+        <ValidationMessage For="@(() => products.MRP_RATE)" />
+    </div>
+    <div class="mb-3">
+        <label for="STOCK_QTY" class="form-label">Stock</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="products.STOCK_QTY" />
+        </div>
+        <ValidationMessage For="@(() => products.AVG_RATE)" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
